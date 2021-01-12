@@ -7,3 +7,6 @@ real_batch = next(iter(dataloader))
 
 writer.add_graph(netD, real_batch[0].to(device))
 writer.close()
+
+%load_ext tensorboard
+%tensorboard --logdir=runs
